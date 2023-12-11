@@ -1,5 +1,5 @@
 import "./Terminal.css";
-import { useCallback, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRefCallback } from "../scripts/React-Extended.ts";
 import ContentEditable from "react-contenteditable";
 import sanitizeHtml from "sanitize-html";
