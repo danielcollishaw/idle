@@ -39,7 +39,6 @@ function Terminal() {
 
   const onKeyUp = useRefCallback(
     (e: any) => {
-      console.log(releaseAudio);
       const key = e.which;
       handleAudio(releaseAudio, key)?.play();
     },
