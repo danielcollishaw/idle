@@ -26,7 +26,8 @@ function Terminal() {
   }, []);
 
   const onContentChange = useRefCallback((e: any) => {
-    setContent(sanitizeHtml(e.currentTarget.innerHTML));
+    const content = sanitizeHtml(e.currentTarget.innerHTML);
+    setContent(content);
   }, []);
 
   const onKeyDown = useRefCallback(
