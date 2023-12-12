@@ -1,6 +1,6 @@
 .terminal {
   box-sizing: border-box;
-  width: 100%;
+  width: 50%;
   height: 100%;
 
   padding: 6rem;
@@ -20,6 +20,7 @@
   color: #9ec8b9;
   background-color: #092635;
   border: none;
+  flex-grow: 1;
 }
 
 .terminal::-webkit-scrollbar {

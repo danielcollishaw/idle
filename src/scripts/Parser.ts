@@ -27,6 +27,11 @@ const execute = (query: string) => {
   } else if (query === COMMANDS.Woof) {
     useResourceStore.getState().addToBark(1);
     return OUTPUTS.Woof;
+  } else if (query == COMMANDS.Resources) {
+    useResourceStore.getState().toggleVisible();
+    return !useResourceStore.getState().visible
+      ? OUTPUTS.ResourcesClose
+      : OUTPUTS.ResourcesOpen;
   }
   if (query.match("invalid command") || query.match("<br />")) {
     return "";

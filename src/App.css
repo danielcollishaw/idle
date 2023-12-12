@@ -8,6 +8,7 @@ body {
   width: 100vw;
   background-color: #1b4242;
   color: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  display: flex;
+  overflow: hidden;
 }

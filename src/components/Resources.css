@@ -1,6 +1,6 @@
 .resources {
   box-sizing: border-box;
-  width: 100%;
+  width: 50%;
   height: 100%;
 
   padding: 6rem;
@@ -14,6 +14,13 @@
 
   overflow: auto;
   color: #9ec8b9;
+  transition: all 1s ease;
+}
+
+.hide-resources {
+  width: 0;
+  padding-inline: 0;
+  color: #1b4242;
 }
 
 .indent {
