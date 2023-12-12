@@ -37,20 +37,20 @@ export const loadReleaseBlobs = async () => {
   return Promise.all(promiseArr);
 };
 
-export const handleAudio = (audio: Array<string>, key: number) => {
+export const handleAudio = (audio: Array<string>, key: string) => {
   if (audio.length <= 0) {
     return;
   }
 
   const sound = new Audio();
   switch (key) {
-    case 8:
+    case "Backspace":
       sound.src = audio[AUDIO_CODES.Backspace];
       break;
-    case 13:
+    case "Enter":
       sound.src = audio[AUDIO_CODES.Enter];
       break;
-    case 32:
+    case "Space":
       sound.src = audio[AUDIO_CODES.Space];
       break;
     default:
