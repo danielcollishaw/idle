@@ -1,5 +1,6 @@
 import { useResourceStore } from "../scripts/Resources";
-import { COMMANDS, OUTPUTS } from "../templates/Commands";
+import { COMMANDS, ITEMS, OUTPUTS } from "../templates/Commands";
+import { buyDog } from "./Shop";
 
 export const parse = (text: string) => {
   const pattern =
@@ -33,6 +34,9 @@ const execute = (query: string) => {
       ? OUTPUTS.ResourcesClose
       : OUTPUTS.ResourcesOpen;
   }
+  else if (query.match(COMMANDS.Buy)) {
+    return handleBuy(query);
+  }
   if (query.match("invalid command") || query.match("<br />")) {
     return "";
   }
@@ -52,3 +56,14 @@ const replaceLastInstance = (dirty: string, pattern: string, clean: string) => {
     .replace(pattern, `${clean}<div><br /></div>`);
   return ptone + pttwo;
 };
+
+const handleBuy = (query: string) => {
+  const [_, item, amount] = query.split((' '));
+  console.log(`${_} ${item} ${amount}`);
+
+  if (item === ITEMS.Dog) {
+    return buyDog(parseInt(amount || '1'));
+  }
+
+  return '<div>No item specified</div>';
+}; 

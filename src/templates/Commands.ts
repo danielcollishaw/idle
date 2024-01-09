@@ -3,6 +3,7 @@ export enum COMMANDS {
   Clear = "clear",
   Resources = "resources",
   Woof = "woof",
+  Buy = "buy",
 }
 
 export enum OUTPUTS {
@@ -18,4 +19,8 @@ export enum OUTPUTS {
   ResourcesOpen = "<div>build em' up</div>",
   ResourcesClose = "<div>break em' down</div>",
   Woof = "<div>bark bark</div>",
+}
+
+export enum ITEMS {
+  Dog = "dog",
 }
